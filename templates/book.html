@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book
+{% endblock %}
+
+{% block body %}
+
+<h1>Book Details</h1>
+<form method="post","get">
+
+<ul>
+    <li>ISBN: {{ book.isbn }}</li>
+    <li>Title: {{ book.title }}</li>
+    <li>Author: {{ book.author }}</li>
+    <li>Year: {{ book.year }}</li>
+    <li>TBR's Average Rating: {{ avg_rating }}</li>
+    <li>Goodread's Average Rating: {{ gr_avg_rating }}</li>
+    <li>Goodread's Rating Count: {{ gr_avg_rating_count }}</li>
+</ul>
+
+<h4>Reviews from TBR User's</h4>
+<ul>
+        {% for review in reviews %}
+            <li>
+                {{ review.review }}
+            </li>
+        {% endfor %}
+</ul>
+
+<h5>Please take a moment to submit your rating & review for this book:</h5>
+
+</form>
+
+<form action="{{ url_for('ratingreview') }}" method="post">
+
+    <div class="container">
+    <div class="radio">
+        <label>
+            <input type="radio" name="rating" id="radio1" value="1">
+            1
+        </label>
+        <label>
+            <input type="radio" name="rating" id="radio2" value="2">
+            2
+        </label>
+        <label>
+            <input type="radio" name="rating" id="radio3" value="3">
+            3
+        </label>
+        <label>
+            <input type="radio" name="rating" id="radio4" value="4">
+            4
+        </label>
+        <label>
+            <input type="radio" name="rating" id="radio5" value="5">
+            5
+        </label>
+    </div>
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="review" placeholder="Review">
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary">Submit Review</button>
+    </div>
+
+</form>
+
+
+{% endblock %}

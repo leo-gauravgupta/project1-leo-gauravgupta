@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    The Book Review
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('books') }}" method="POST", "GET">
+
+    <h1>Book Search</h1>
+        <p> </p>
+        <p> </p>
+        <h4>Please enter the Book details</h4>
+        <p> </p>
+
+    <div class="form-group">
+        <input class="form-control" name="isbn" placeholder="ISBN">
+        <input class="form-control" name="title" placeholder="Title">
+        <input class="form-control" name="author" placeholder="Author">
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+{% endblock %}

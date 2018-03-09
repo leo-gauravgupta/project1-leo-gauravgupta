@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login Failed
+{% endblock %}
+
+{% block body %}
+    <h1>Login Failed!</h1>
+    <p> </p>
+    <p> </p>
+
+    {{ message }}
+
+    <p> </p>
+    <p> </p>
+
+    <form action="/" method="GET">
+      <input type="submit" value="Login">
+    </form>
+
+{% endblock %}

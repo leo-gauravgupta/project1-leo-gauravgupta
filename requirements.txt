@@ -1,0 +1,15 @@
+1) Python 3.6.4
+2) Flask
+3) SQLAlchemy
+4) PostgreSQL
+
+5) Packages referred:
+
+-- from flask import Flask, flash, redirect, render_template, request, session, abort, json, jsonify
+-- from flask_security import Security, login_required, SQLAlchemySessionUserDatastore
+
+-- from sqlalchemy import create_engine
+-- from sqlalchemy.orm import scoped_session, sessionmaker
+-- from sqlalchemy.ext.declarative import declarative_base
+
+-- import os, requests

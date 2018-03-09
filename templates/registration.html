@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    {% if session['logged_in'] %}
+        <p>You're logged in already!</p>
+    {% else %}
+        <form action="/adduser" method="POST">
+            <h1>Welcome to The Book Review (TBR)</h1>
+                <p> </p>
+                <p> </p>
+                <h4>Please register</h4>
+                <p> </p>
+
+           <input type="username" name="username" placeholder="Username">
+           <input type="password" name="password" placeholder="Password">
+           <input type="email" name="email" placeholder="eMail">
+           <input type="submit" value="Register Me">
+        </form>
+
+    {% endif %}
+
+{% endblock %}
