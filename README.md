@@ -33,7 +33,7 @@ Things I couldn't get a chance to complete:
 
 2) Look and Feel -- I have used the very basic format for this web-site. I had plans to plug in the css/bootsrapcdn to make it more presentable, but could not due get a chance. I focussed more on the core-structure given the lack of time with me this time. Apologies for that.
 
-Please review this project. I will appreciate the feedback or suggestions.
+Please review this project. I will appreciate any feedback or suggestions.
 
 Thanks,
 Gaurav
